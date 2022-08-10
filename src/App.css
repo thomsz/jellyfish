@@ -1,38 +1,72 @@
+@import '~antd/dist/antd.css';
+
 .App {
-  text-align: center;
+  width: 60rem;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  gap: 1rem;
+  margin: 2rem 0;
   display: flex;
+  padding: 2rem 0;
   flex-direction: column;
+}
+
+aside {
+  top: 0;
+  width: inherit;
+  height: 4rem;
+  display: flex;
+  z-index: 10;
+  position: fixed;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+aside .sort-by-type {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.gallery {
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery > .card {
+  width: 30%;
+}
+
+@media (max-width: 980px) {
+  .App {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  main {
+    top: 6rem;
+    margin: .5rem 0;
+    padding: 1rem;
+    position: relative;
+  }
+  
+  aside {
+    gap: 1rem;
+    height: 8rem;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .list-item {
+    text-align: center;
+  }
+
+  .gallery > .card {
+    width: 46%;
   }
 }
